@@ -72,6 +72,9 @@ label , i{
     width: 100%;
     height: 450px;
 }
+.active{
+    color: #0066ffd4;
+}
 
 
 
