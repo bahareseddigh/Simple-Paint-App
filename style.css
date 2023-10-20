@@ -33,7 +33,21 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-
+.tools .color{
+    display: flex;
+    align-items: center;
+}
+input[type="color"]{
+    border: none;
+    width: 30px;
+    height: 20px;
+    margin: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+input[type="color"]::-webkit-color-swatch{
+    border: 2px solid lightgray;
+}
 
 
 
