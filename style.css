@@ -68,6 +68,10 @@ label , i{
 .buttons .clear:hover{
     background: lightgray;
 }
+.draw-area{
+    width: 100%;
+    height: 450px;
+}
 
 
 
