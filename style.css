@@ -27,3 +27,23 @@ body{
     border-bottom: 1px solid #ccc;
     padding: 0 15px;
 }
+.tools{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
