@@ -5,6 +5,7 @@ const brushColor = document.querySelector('#color-picker')
 const eraser = document.querySelector('.eraser')
 const brush = document.querySelector('.brush')
 const clearBtn = document.querySelector('.clear')
+const saveBtn = document.querySelector('.save')
 
 let isDrawing = false
 let currentWidth = 5
@@ -13,6 +14,8 @@ let currentColor = ''
 window.addEventListener('load' , () => {
     canvas.width = canvas.offsetWidth
     canvas.height = canvas.offsetHeight
+    ctx.fillStyle = 'white'
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
 })
 
 canvas.addEventListener('mousedown' , startDraw)
@@ -40,8 +43,14 @@ brushColor.addEventListener('change' , () => {
 })
 
 clearBtn.addEventListener('click' , () => {
-    ctx.fillStyle = 'white'
     ctx.fillRect(0, 0, canvas.width, canvas.height)
+})
+
+saveBtn.addEventListener('click' , () => {
+    let link = document.createElement('a')
+    link.download = `${Date.now()}.jpg`
+    link.href = canvas.toDataURL()
+    link.click()
 })
 
 function startDraw(){
