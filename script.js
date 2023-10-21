@@ -4,6 +4,7 @@ const brushWidth = document.querySelector('#brush-width')
 const brushColor = document.querySelector('#color-picker')
 const eraser = document.querySelector('.eraser')
 const brush = document.querySelector('.brush')
+const clearBtn = document.querySelector('.clear')
 
 let isDrawing = false
 let currentWidth = 5
@@ -36,6 +37,11 @@ brushWidth.addEventListener('change' , () => {
 
 brushColor.addEventListener('change' , () => {
     currentColor = brushColor.value
+})
+
+clearBtn.addEventListener('click' , () => {
+    ctx.fillStyle = 'white'
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
 })
 
 function startDraw(){
